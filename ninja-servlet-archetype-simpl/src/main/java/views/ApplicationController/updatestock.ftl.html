@@ -1,0 +1,38 @@
+<#import "../layout/defaultLayout.ftl.html" as layout> 
+<@layout.myLayout "Home page">    
+
+
+<h2>Enter Detail to Update in stock</h2>
+
+<form action="/additem" method="post">
+
+    <table class="form">
+        <tr>
+            <th>Item Id</th>
+            <td><input type="number"  name="itemid" required/>
+
+            </td>
+        </tr><br><br>
+        <tr>
+            <th> Item Name </th>
+            <td><input  type="text" name="itemname" required/></td>
+        
+        </tr>
+		
+        <tr>
+            <th> Quantity </th>
+            <td><input  type="number"  name="Quantity" required/></td>
+        </tr>
+        
+        <tr>
+            <th>Price</th>
+            <td><input  type="number" name="price" required/></td>
+        </tr>
+    </table>
+
+    <p>
+        <input type="submit" value="Update item" /> 
+    </p>
+</form>
+
+</@layout.myLayout>
